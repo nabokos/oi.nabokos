@@ -4,6 +4,6 @@
 
 ### Setup
 
-* ```rake config:setup```
+* ```rake config:setup db:setup db:seed```
 * done
 
