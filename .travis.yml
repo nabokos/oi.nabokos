@@ -1,4 +1,4 @@
 language: ruby
 rvm:
  - "2.2.2"
-script: bundle exec rake test
+script: bundle exec rake config:setup test

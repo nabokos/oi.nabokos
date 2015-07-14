@@ -4,6 +4,6 @@
 
 ### Setup
 
-* ```rake dev:setup```
+* ```rake config:setup```
 * done
 
