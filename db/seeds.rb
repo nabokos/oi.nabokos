@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+[
+  {
+    nick: 'thathalas',
+    email: 'joschka@notsitz.info',
+    role: 'admin',
+    password: 'iamaprettygoodpassword,dontyouthink',
+    password_confirmation: 'iamaprettygoodpassword,dontyouthink'
+  },{
+    nick: 'salzig',
+    email: 'ben@notsitz.info',
+    role: 'admin',
+    password: 'strangepasswordfromhell,withgreatings',
+    password_confirmation: 'strangepasswordfromhell,withgreatings'
+  }
+].each(&(User.method(:create)))
