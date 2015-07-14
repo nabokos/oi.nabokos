@@ -3,7 +3,9 @@
 one:
   nick: Thathalas
   role: admin
+  email: thathalas@example.org
 
 two:
   nick: Salzig
   role: admin
+  email: salzig@example.org
