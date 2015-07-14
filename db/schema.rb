@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714145111) do
+ActiveRecord::Schema.define(version: 20150714151754) do
+
+  create_table "maps", force: :cascade do |t|
+    t.string  "name"
+    t.string  "author"
+    t.text    "field"
+    t.integer "creator_id"
+  end
+
+  add_index "maps", ["creator_id"], name: "index_maps_on_creator_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "nick"
