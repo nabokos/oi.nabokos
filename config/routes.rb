@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :v1 do
-    resources :maps, only: :index
+    resources :maps, only: [:index, :show]
   end
 
   devise_for :users
