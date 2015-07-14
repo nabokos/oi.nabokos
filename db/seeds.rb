@@ -21,3 +21,12 @@
     password_confirmation: 'strangepasswordfromhell,withgreatings'
   }
 ].each(&(User.method(:create)))
+
+[
+  {
+    name: 'Simple',
+    author: 'http://www.sokobano.de/',
+    field: "#####\n#@$.#\n#####",
+    creator_id: 2
+  }
+].each(&(Map.method(:create)))
