@@ -14,10 +14,12 @@
 ActiveRecord::Schema.define(version: 20150714151754) do
 
   create_table "maps", force: :cascade do |t|
-    t.string  "name"
-    t.string  "author"
-    t.text    "field"
-    t.integer "creator_id"
+    t.string   "name"
+    t.string   "author"
+    t.text     "field"
+    t.integer  "creator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "maps", ["creator_id"], name: "index_maps_on_creator_id"

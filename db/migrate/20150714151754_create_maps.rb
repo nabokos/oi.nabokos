@@ -5,6 +5,7 @@ class CreateMaps < ActiveRecord::Migration
       t.string :author
       t.text :field
       t.references :creator, index: true, foreign_key: true
+      t.timestamps null: false
     end
   end
 end
