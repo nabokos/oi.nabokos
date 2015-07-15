@@ -6,12 +6,15 @@ module V1
     end
 
     def show
-      begin
-        map = Map.find(params[:id])
-        render json: map
-      rescue ActiveRecord::RecordNotFound
-        render json: {}, status: :not_found
+      map = Map.find(params[:id])
+      respond_to do |format|
+        format.sokoban { render text: "#{map.field}\nTitle: #{map.name}\nAuthor: #{map.author}" }
+        format.any { render json: map }
       end
+    end
+
+    rescue_from ActiveRecord::RecordNotFound do
+      render json: {}, status: :not_found
     end
   end
 end

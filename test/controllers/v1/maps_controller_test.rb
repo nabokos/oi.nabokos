@@ -21,5 +21,11 @@ class V1::MapsControllerTest < ActionController::TestCase
 
       assert_response :not_found
     end
+
+    test "should render as sokoban" do
+      get :show, id: maps(:one).id, format: 'sokoban'
+
+      assert_response :success
+    end
   end
 end
