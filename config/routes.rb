@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  namespace :v1, defaults: { format: :json } do
-    resources :maps, only: [:index, :show]
+  namespace :api do
+    namespace :v1, defaults: { format: :json } do
+      resources :maps, only: [:index, :show]
+    end
   end
 
   devise_for :users

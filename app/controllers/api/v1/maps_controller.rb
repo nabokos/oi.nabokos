@@ -1,4 +1,4 @@
-module V1
+module API::V1
   class MapsController < BaseController
     def index
       maps = Map.all

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class V1::MapsControllerTest < ActionController::TestCase
+class API::V1::MapsControllerTest < ActionController::TestCase
   class Index < self
     test "should list maps" do
       get :index
