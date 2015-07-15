@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   namespace :api do
+    root 'v1/maps#index'
+
     namespace :v1, defaults: { format: :json } do
+      root to: 'maps#index'
       resources :maps, only: [:index, :show]
     end
   end
